@@ -1,7 +1,11 @@
 ---
 description: Salesforce healthcare regulatory agent for loyalty-management work involving privacy, auditability, data handling, validation, and release risk.
-tools: ['changes', 'codebase', 'search', 'filesystem', 'memory']
-model: GPT-5
+tools:
+  - changes
+  - codebase
+  - search
+  - filesystem
+  - memory
 ---
 
 # Salesforce Regulatory Agent

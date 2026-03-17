@@ -1,7 +1,12 @@
 ---
 description: Review agent that evaluates plans, designs, code changes, tests, and release readiness for correctness, consistency, quality, and risk.
-tools: ['changes', 'codebase', 'runCommands', 'search', 'filesystem', 'memory']
-model: GPT-5
+tools:
+  - changes
+  - codebase
+  - runCommands
+  - search
+  - filesystem
+  - memory
 ---
 
 # Reviewer Agent

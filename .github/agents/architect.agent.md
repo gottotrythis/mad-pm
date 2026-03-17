@@ -1,7 +1,13 @@
 ---
 description: Architecture agent that designs the solution shape, interfaces, boundaries, trade-offs, and implementation approach before build work starts.
-tools: ['changes', 'codebase', 'editFiles', 'runCommands', 'search', 'filesystem', 'memory']
-model: GPT-5
+tools:
+  - changes
+  - codebase
+  - editFiles
+  - runCommands
+  - search
+  - filesystem
+  - memory
 ---
 
 # Architect Agent

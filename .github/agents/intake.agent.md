@@ -1,7 +1,12 @@
 ---
 description: Intake agent that converts business requests into structured, scoped delivery briefs for either Salesforce healthcare loyalty work or AI/ML/GenAI product work.
-tools: ['changes', 'codebase', 'editFiles', 'search', 'filesystem', 'memory']
-model: GPT-5
+tools:
+  - changes
+  - codebase
+  - editFiles
+  - search
+  - filesystem
+  - memory
 ---
 
 # Intake Agent

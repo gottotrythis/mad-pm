@@ -1,8 +1,17 @@
+---
+applyTo: "**"
+---
+
 # Project Instructions for MAD Stack
 
 This workspace uses a multi-agent development model.
 
 These instructions apply to all custom agents, reusable skills, and planning/review workflows in this repository.
+
+> **Domain overlays:** Load the appropriate overlay alongside this file based on the task domain.
+> - Salesforce / healthcare work → `.github/instructions/sf.instructions.md`
+> - AI / ML / GenAI work → `.github/instructions/ai-ml.instructions.md`
+> - Workspace routing and agent roster → `AGENTS.md`
 
 ## Core operating principles
 

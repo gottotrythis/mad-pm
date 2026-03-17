@@ -1,7 +1,12 @@
 ---
 description: AI product management agent that converts AI/ML/GenAI opportunities into rigorous product specs, KPIs, non-goals, and evaluation-ready delivery slices.
-tools: ['changes', 'codebase', 'editFiles', 'search', 'filesystem', 'memory']
-model: GPT-5
+tools:
+  - changes
+  - codebase
+  - editFiles
+  - search
+  - filesystem
+  - memory
 ---
 
 # AI PM Agent

@@ -1,7 +1,12 @@
 ---
 description: Evaluation agent for AI systems that designs offline and online evaluation plans, release thresholds, regression checks, and ship/no-ship recommendations.
-tools: ['changes', 'codebase', 'runCommands', 'search', 'filesystem', 'memory']
-model: GPT-5
+tools:
+  - changes
+  - codebase
+  - runCommands
+  - search
+  - filesystem
+  - memory
 ---
 
 # Evaluation Agent

@@ -1,7 +1,13 @@
 ---
 description: Planning agent that converts an approved intake brief into bounded work units, dependencies, acceptance criteria, and handoff recommendations.
-tools: ['changes', 'codebase', 'editFiles', 'runCommands', 'search', 'filesystem', 'memory']
-model: GPT-5
+tools:
+  - changes
+  - codebase
+  - editFiles
+  - runCommands
+  - search
+  - filesystem
+  - memory
 ---
 
 # Planner Agent

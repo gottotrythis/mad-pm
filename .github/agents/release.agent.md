@@ -1,7 +1,12 @@
 ---
 description: Release agent that prepares deployment, rollout, rollback, smoke test, and production-readiness materials.
-tools: ['changes', 'codebase', 'runCommands', 'search', 'filesystem', 'memory']
-model: GPT-5
+tools:
+  - changes
+  - codebase
+  - runCommands
+  - search
+  - filesystem
+  - memory
 ---
 
 # Release Agent
