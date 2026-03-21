@@ -1,112 +1,108 @@
 # MAD Stack Workspace
 
-This repository provides a structured multi-agent workspace for two primary domains:
+This repository now works as an AI PM starter workspace with two clearly separated layers:
+
+- an operating-system layer for agents, rules, and reusable templates
+- a project layer for active initiative work, research, and generated artifacts
+
+It still supports both major domains already present in the repo:
 
 - Salesforce loyalty management for healthcare and life sciences
 - AI, ML, and GenAI product and delivery work
 
-It is designed to improve delivery quality through clear intake, planning, architecture, review, evaluation, and release handoffs.
-
-## Repository Layout
+## Top-Level Structure
 
 ```text
 .
 ├── AGENTS.md
+├── ONBOARDING.md
+├── MCP_SETUP.md
 ├── README.md
+├── .github/
+│   ├── agents/
+│   ├── instructions/
+│   └── skills/
 ├── .vscode/
 │   └── mcp.json
-└── .github/
-    ├── agents/
-    │   ├── intake.agent.md
-    │   ├── planner.agent.md
-    │   ├── architect.agent.md
-    │   ├── reviewer.agent.md
-    │   ├── release.agent.md
-    │   ├── sf-regulatory.agent.md
-    │   ├── ai-pm.agent.md
-    │   └── eval.agent.md
-    ├── skills/
-    │   ├── sf-loyalty-intake/skill.md
-    │   ├── sf-release-readiness/skill.md
-    │   ├── sf-integration-mapping/skill.md
-    │   ├── ai-spec-writing/skill.md
-    │   ├── rag-design/skill.md
-    │   └── eval-design/skill.md
-    └── instructions/
-        ├── project.instructions.md
-        ├── sf.instructions.md
-        └── ai-ml.instructions.md
+├── knowledge/
+│   ├── _templates/
+│   └── examples/
+├── memory/
+│   ├── decisions/
+│   ├── exec-updates/
+│   ├── strategy-reviews/
+│   └── weekly-plans/
+├── templates/
+├── projects/
+│   └── incubation/
+│       └── wtd-next-in-line/
+├── output/
+├── scripts/
+└── datadump/
+    └── README.md
 ```
 
-## How This Workspace Works
+## How To Think About The Repo
 
-The workspace follows a role-based agent model:
+### 1. Operating system
 
-1. Intake clarifies and classifies the request.
-2. Planning breaks work into bounded units.
-3. Architecture defines solution shape and trade-offs.
-4. Domain and risk review validates compliance and quality constraints.
-5. Review checks correctness, safety, and readiness.
-6. Release prepares deployment, rollback, and monitoring.
+These are the durable, reusable parts of the workspace:
 
-For AI-heavy initiatives, evaluation is required before release.
+- `AGENTS.md`: routing, handoffs, and agent roster
+- `.github/instructions/`: baseline and domain overlays
+- `.github/skills/`: specialized workflows
+- `knowledge/`: repeatable PM context and reusable strategy scaffolds
+- `templates/`: ready-to-fill delivery templates
+- `memory/`: cross-project summaries and decision history
 
-## Standard Handoff Paths
+### 2. Project work
 
-### General Path
+These are the initiative-specific parts:
 
-`intake -> planner -> architect -> reviewer -> release`
+- `projects/incubation/`: early discovery and framing
+- `projects/active/`: execution-stage work
+- `projects/archive/`: completed or paused work
 
-### Salesforce or Healthcare Regulated Path
+Each project should get its own folder with subfolders such as:
 
-`intake -> planner -> architect -> sf-regulatory -> reviewer -> release`
+- `documents/`
+- `research/`
+- `code/`
+- `assets/` when needed
 
-### AI, ML, or GenAI Path
+## Why This Is Better Than The Current Dump Model
 
-`intake -> ai-pm -> planner -> architect -> reviewer -> eval -> release`
+- Reusable PM assets no longer get mixed with project-specific notes.
+- New initiatives have a clear home from day one.
+- Your current agent system stays intact instead of being duplicated.
+- The structure matches how an AI PM actually works: strategy, discovery, decisions, evaluation, and delivery.
 
-## Domain Guidance Files
+## Current Example Project
+
+The existing `wtd next in line` material has been moved to:
+
+- [`projects/incubation/wtd-next-in-line/`](/Users/vaibhavjha/Documents/mad-pm/projects/incubation/wtd-next-in-line)
+
+This keeps the work intact while putting it in a scalable location.
+
+## Recommended Flow For A New Project
+
+1. Create `projects/incubation/<project-slug>/`.
+2. Start with `templates/project-intake.md`.
+3. Pull supporting context from `knowledge/_templates/`.
+4. Route through the matching handoff path in `AGENTS.md`.
+5. Save durable decisions or weekly summaries into `memory/` when they are useful beyond one project.
+
+## Domain Guidance
 
 - Base project guidance: `.github/instructions/project.instructions.md`
 - Salesforce and healthcare overlay: `.github/instructions/sf.instructions.md`
 - AI, ML, and GenAI overlay: `.github/instructions/ai-ml.instructions.md`
 
-## Skills Library
-
-### Salesforce Skills
-
-- `.github/skills/sf-loyalty-intake/skill.md`
-- `.github/skills/sf-release-readiness/skill.md`
-- `.github/skills/sf-integration-mapping/skill.md`
-
-### AI and ML Skills
-
-- `.github/skills/ai-spec-writing/skill.md`
-- `.github/skills/rag-design/skill.md`
-- `.github/skills/eval-design/skill.md`
-
-## Editing and Quality Expectations
-
-- Prefer small, reviewable changes over broad edits.
-- State assumptions explicitly and avoid inventing requirements.
-- Include testing implications with implementation guidance.
-- Include monitoring and rollback implications with release guidance.
-- Route sensitive Salesforce healthcare changes through regulatory review.
-- Route AI release decisions through explicit evaluation gates.
-
-## Workspace MCP Configuration
-
-The workspace-level MCP configuration is located at:
-
-- `.vscode/mcp.json`
-
-Use it to define and standardize MCP server setup for this repository.
-
 ## Recommended Starting Point
 
-If you are new to this workspace:
-
-1. Read `AGENTS.md` for routing and handoff sequences.
-2. Read `.github/instructions/project.instructions.md`.
-3. Load the relevant domain overlay (`sf.instructions.md` or `ai-ml.instructions.md`).
-4. Use the matching skill file before generating deliverables.
+1. Read `ONBOARDING.md`.
+2. Read `AGENTS.md`.
+3. Read `.github/instructions/project.instructions.md`.
+4. Load the right domain overlay for the project.
+5. Create or reuse a project folder under `projects/`.
